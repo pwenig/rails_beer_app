@@ -29,4 +29,10 @@ class ListController < ApplicationController
     update_beer.save
     redirect_to '/'
   end
+
+  def destroy
+    @beer = Beer.find(params[:id])
+    @beer.destroy!
+    redirect_to '/'
+  end
 end

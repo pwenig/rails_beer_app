@@ -10,5 +10,9 @@
 <% @beer.each do |beer| %>
   <h3>Name: <%= beer.name %> | Kind: <%= beer.kind %> | Description: <%= beer.description %>
     | <a href="/beers/<%= beer.id %>/edit">Update</a></h3>
+    <form action="/beers/<%= beer.id %>" method='post'>
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Delete">
+
 
 <% end %>

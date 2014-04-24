@@ -22,5 +22,7 @@ feature 'Create a list of favorite beers' do
     fill_in 'description', with: 'Excellent low budget'
     click_on 'Edit'
     expect(page).to have_content 'Excellent low budget'
+    click_on 'Delete'
+    expect(page).to have_no_content 'High Life'
   end
 end

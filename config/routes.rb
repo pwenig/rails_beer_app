@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   # Edit Beers
   get 'beers/:id/edit'     => 'list#edit'
   put 'beers/:id'          => 'list#update'
+  delete 'beers/:id'       => 'list#destroy'
 
 
   # Example of regular route:
