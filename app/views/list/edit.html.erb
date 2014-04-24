@@ -1,0 +1,7 @@
+<form action="/beers/<%= @beer.id %>" method='post'>
+  <input type="hidden" name="_method" value="put">
+  <input type="text" name="name" placeholder="name" value="<%= @beer.name %>">
+  <input type="text" name="kind" placeholder="kind" value="<%= @beer.kind %>">
+  <input type="text" name="description" placeholder="description" value="<%= @beer.description %>">
+  <input type="submit" value="Edit">
+</form>
